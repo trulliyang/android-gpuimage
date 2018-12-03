@@ -3,7 +3,7 @@ apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
-    buildToolsVersion BUILD_TOOLS_VERSION
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion MIN_SDK_VERSION as int
@@ -34,7 +34,7 @@ android {
             jni.srcDirs = ['jni']
         }
 
-        instrumentTest.setRoot('tests')
+        androidTest.setRoot('tests')
     }
 
     lintOptions {
